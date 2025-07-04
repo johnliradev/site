@@ -6,7 +6,7 @@ import { ArrowUpRight } from "lucide-react";
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between w-[90%] p-4 ">
+    <header className="flex items-center justify-between w-full py-4 ">
       <Link href="/" className="flex items-center gap-2">
         <Image src={vultureIcon} alt="Vulture icon" width={20} />
         <h2 className="font-bold text-xl">John lira</h2>
