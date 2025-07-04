@@ -1,12 +1,19 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import vultureIcon from "@/assets/vulture.svg";
 import { Button } from "../ui/button";
 import { ArrowUpRight } from "lucide-react";
+import { motion } from "motion/react";
 
 export const Header = () => {
   return (
-    <header className="flex items-center justify-between w-full py-4 ">
+    <motion.header
+      initial={{ opacity: 0, y: -40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="flex items-center justify-between w-full py-4 "
+    >
       <Link href="/" className="flex items-center gap-2">
         <Image src={vultureIcon} alt="Vulture icon" width={20} />
         <h2 className="font-bold text-xl">John lira</h2>
@@ -34,6 +41,6 @@ export const Header = () => {
           <ArrowUpRight />
         </Button>
       </div>
-    </header>
+    </motion.header>
   );
 };
