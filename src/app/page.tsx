@@ -18,11 +18,7 @@ export default function Home() {
               <FileDown />
             </Button>
             <Button size={"xl"}>
-<<<<<<< HEAD
-              <p>Project Code</p>
-=======
-              <p>Get Code</p>
->>>>>>> 8f70537dcd91b7c6933545b1baba282c88f06c11
+              <p>Get code</p>
               <Code />
             </Button>
           </div>
