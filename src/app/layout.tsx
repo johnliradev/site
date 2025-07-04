@@ -19,8 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  antialiased`}>
-        <div className="dark min-h-screen transition-all bg-black text-white duration-150 flex flex-col items-center">
+      <body
+        className={`${inter.className}  antialiased min-h-screen transition-all bg-black text-white duration-150`}
+      >
+        <div className="dark mx-auto flex flex-col items-center  w-[90%] max-w-7xl">
           <Header />
           {children}
         </div>
