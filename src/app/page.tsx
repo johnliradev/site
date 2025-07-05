@@ -3,6 +3,7 @@ import { EmailCard } from "@/components/EmailCard";
 import { Hero } from "@/components/Hero";
 import { ProjectsPreview } from "@/components/ProjectsPreview";
 import { Button } from "@/components/ui/button";
+import { WritingsPreview } from "@/components/WritingsPreview";
 import { XCard } from "@/components/XCard";
 import { Code, FileDown } from "lucide-react";
 import { motion } from "motion/react";
@@ -39,9 +40,9 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className="flex w-full justify-between">
+      <div className="flex w-full justify-between gap-10">
         <ProjectsPreview />
-        <div className="w-full"></div>
+        <WritingsPreview />
       </div>
     </>
   );
