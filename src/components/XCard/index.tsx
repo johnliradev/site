@@ -13,6 +13,7 @@ import XIcon from "@/assets/x-icon.svg";
 import Image from "next/image";
 import { Users } from "lucide-react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 export const XCard = () => {
   return (
@@ -38,13 +39,12 @@ export const XCard = () => {
           Cybersecurity enthusiast, Sharing my journey and progress.
         </CardContent>
         <CardFooter className="flex-col gap-2">
-          <Button className="gap-4">
-            <p>Follow me</p>
-            <div className="flex items-center gap-1">
-              <p>37</p>
+          <Link href={"https://x.com/johnliradev"} target="_blank">
+            <Button className="gap-4">
+              <p>Follow me</p>
               <Users />
-            </div>
-          </Button>
+            </Button>
+          </Link>
         </CardFooter>
       </Card>
     </motion.div>
