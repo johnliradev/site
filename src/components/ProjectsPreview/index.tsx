@@ -13,7 +13,7 @@ export const ProjectsPreview = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="flex  items-center justify-between border-b  pb-1 border-muted-foreground">
+      <div className="flex text-xl  items-center justify-between border-b  pb-1 border-muted-foreground">
         <p>Projects</p>
         <Link href={"/projects"}>
           <Button variant={"link"}>
@@ -31,15 +31,18 @@ export const ProjectsPreview = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: index * 0.4, ease: "easeOut" }}
           >
-            <div className="relative overflow-hidden rounded-lg">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-48 object-cover"
-              />
-            </div>
             <div className="space-y-2">
               <h3 className="text-lg font-semibold">{project.title}</h3>
+              <div className="flex flex-wrap gap-2">
+                {project.tech.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="inline-block bg-muted px-2 py-1 rounded text-xs font-medium"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
               <p className="text-sm text-muted-foreground">{project.desc}</p>
               <div className="flex gap-2">
                 <Button size="sm" variant="outline" asChild>

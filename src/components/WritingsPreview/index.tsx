@@ -18,7 +18,7 @@ export const WritingsPreview = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
-      <div className="flex items-center justify-between border-b pb-1 border-muted-foreground">
+      <div className="flex text-xl  items-center justify-between border-b pb-1 border-muted-foreground">
         <p className="font-semibold text-lg">Writings</p>
         <Link href="/writings">
           <Button variant="link" className="gap-1">
@@ -40,8 +40,8 @@ export const WritingsPreview = () => {
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
-              duration: 0.6,
-              delay: 0.2 + idx * 0.2,
+              duration: 0.3,
+              delay: 0.1 + idx * 0.1,
               ease: "easeOut",
             }}
             className="flex items-center justify-between rounded-md bg-muted px-4 py-2 hover:bg-muted/70 transition-colors"

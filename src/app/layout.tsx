@@ -22,7 +22,7 @@ export default function RootLayout({
       <body
         className={`${geist.className} dark antialiased  transition-all bg-black text-white duration-150`}
       >
-        <div className="relative mx-auto flex flex-col items-center justify-center min-h-screen   w-[95%] max-w-[1420px]">
+        <div className="relative mx-auto flex flex-col gap-20 items-center  min-h-screen  w-[95%] max-w-5xl">
           <Header />
           {children}
         </div>

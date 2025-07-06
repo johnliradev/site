@@ -1,4 +1,5 @@
 "use client";
+import { AboutMe } from "@/components/AboutMe";
 import { Hero } from "@/components/Hero";
 import { ProjectsPreview } from "@/components/ProjectsPreview";
 import { SocialCard } from "@/components/SocialCard";
@@ -14,12 +15,12 @@ export default function Home() {
       <div className="flex justify-between w-full relative">
         {/* Viewer */}
         {selected === "home" && <Hero />}
-        {selected === "about" && <p>building</p>}
+        {selected === "about" && <AboutMe />}
         {selected === "projects" && <ProjectsPreview />}
         {selected === "writings" && <WritingsPreview />}
         {selected === "social" && <SocialCard />}
         {/* Selector */}
-        <ul className="flex flex-col gap-3 text-end absolute right-20 top-1/2 -translate-y-1/2 z-50">
+        <ul className="flex flex-col gap-3 text-end">
           <li>
             <Button
               variant={"link"}
