@@ -21,7 +21,7 @@ export const projects: Project[] = [
   },
   {
     title: "To Do is Silence",
-    desc: "Focus on productivity and focus task management",
+    desc: "Focus on productivity and focus task management. Simple and pratical.",
     tech: ["Typescript", "React", "TailwindCSS"],
     site_url: "https://todoinsilence.vercel.app/",
     code_url: "https://github.com/johnliradev/todoinsilence",

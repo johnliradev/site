@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 import { Header } from "../components/Header";
 
-const inter = Inter({
+const geist = Geist({
   subsets: ["latin"],
 });
 
@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className}  antialiased min-h-screen transition-all bg-black text-white duration-150`}
+        className={`${geist.className} dark antialiased  transition-all bg-black text-white duration-150`}
       >
-        <div className="dark mx-auto flex flex-col items-center  w-[90%] max-w-7xl">
+        <div className="relative mx-auto flex flex-col gap-20 items-center  min-h-screen  w-[95%] max-w-5xl">
           <Header />
           {children}
         </div>
