@@ -7,35 +7,36 @@ export const Hero = () => {
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
+      className="flex flex-col gap-20"
     >
+      <div>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+          className="text-8xl font-medium"
+        >
+          Hi, i'm John
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+          className="text-4xl"
+        >
+          No hyper bio here, i'm just a full-stack developer.
+        </motion.p>
+      </div>
+
       <motion.p
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
-        className="text-4xl/14"
-      >
-        hi,
-        <br />
-        <span className="text-7xl font-bold">i'm John</span>
-      </motion.p>
-      <motion.p
-        initial={{ opacity: 0, y: 40 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
-        className="text-4xl/12 mt-4 "
-      >
-        No hyper bio, <br />
-        just a full-stack developer
-      </motion.p>
-      <motion.div
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.8, ease: "easeOut" }}
-        className="flex items-center gap-2 mt-4"
+        className="text-muted-foreground"
       >
-        <div className="ping h-2 w-2 bg-green-600 rounded-full"></div>
-        <p>Immediately available</p>
-      </motion.div>
+        On side, you'll see my projects, writings, contact info and, sure, about
+        me.
+      </motion.p>
     </motion.div>
   );
 };

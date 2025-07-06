@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import vultureIcon from "@/assets/vulture.svg";
 import { Button } from "../ui/button";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 
 export const Header = () => {
@@ -21,8 +21,8 @@ export const Header = () => {
       <div className="flex items-center gap-4">
         <ul className="flex gap-4">
           <li>
-            <Link href={"/articles"}>
-              <p>Articles</p>
+            <Link href={"/writings"}>
+              <p>Writings</p>
             </Link>
           </li>
           <li>
@@ -31,14 +31,14 @@ export const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href={"/"}>
+            <Link href={"https://github.com/johnliradev"} target="_blank">
               <p>Github</p>
             </Link>
           </li>
         </ul>
         <Button>
-          <p>get in touch</p>
-          <ArrowUpRight />
+          <p>Get Contact</p>
+          <ArrowDown />
         </Button>
       </div>
     </motion.header>
