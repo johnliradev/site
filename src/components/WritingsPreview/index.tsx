@@ -20,7 +20,7 @@ export const WritingsPreview = () => {
     >
       <div className="flex text-xl  items-center justify-between border-b pb-1 border-muted-foreground">
         <p className="font-semibold text-lg">Writings</p>
-        <Link href="/writings">
+        <Link href="/">
           <Button variant="link" className="gap-1">
             View All
             <ArrowUpRight className="w-4 h-4" />

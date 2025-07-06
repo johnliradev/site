@@ -15,7 +15,7 @@ export const ProjectsPreview = () => {
     >
       <div className="flex text-xl  items-center justify-between border-b  pb-1 border-muted-foreground">
         <p>Projects</p>
-        <Link href={"/projects"}>
+        <Link href={"/"}>
           <Button variant={"link"}>
             View All
             <ArrowUpRight />

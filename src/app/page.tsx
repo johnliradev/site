@@ -7,12 +7,13 @@ import { Button } from "@/components/ui/button";
 import { WritingsPreview } from "@/components/WritingsPreview";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
+import { motion } from "motion/react";
 
 export default function Home() {
   const [selected, SetSelected] = useState<string>("home");
   return (
     <>
-      <div className="flex justify-between w-full relative">
+      <div className="flex flex-col-reverse sm:flex-row justify-between w-full relative">
         {/* Viewer */}
         {selected === "home" && <Hero />}
         {selected === "about" && <AboutMe />}
@@ -20,12 +21,17 @@ export default function Home() {
         {selected === "writings" && <WritingsPreview />}
         {selected === "social" && <SocialCard />}
         {/* Selector */}
-        <ul className="flex flex-col gap-3 text-end">
+        <motion.ul
+          className="flex flex-row sm:flex-col gap-3 sm:text-end text-center w-full sm:w-auto mb-4 sm:mb-0"
+          initial={{ opacity: 0, x: 80 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
+        >
           <li>
             <Button
               variant={"link"}
               onClick={() => SetSelected("home")}
-              className="font-semibold text-2xl"
+              className="font-semibold text-base px-2 sm:text-2xl sm:px-4"
             >
               {selected === "home" && (
                 <ChevronRight strokeWidth={4} size={36} />
@@ -37,7 +43,7 @@ export default function Home() {
             <Button
               variant={"link"}
               onClick={() => SetSelected("about")}
-              className="font-semibold text-2xl"
+              className="font-semibold text-base px-2 sm:text-2xl sm:px-4"
             >
               {selected === "about" && (
                 <ChevronRight strokeWidth={4} size={36} />
@@ -49,7 +55,7 @@ export default function Home() {
             <Button
               variant={"link"}
               onClick={() => SetSelected("projects")}
-              className="font-semibold text-2xl"
+              className="font-semibold text-base px-2 sm:text-2xl sm:px-4"
             >
               {selected === "projects" && (
                 <ChevronRight strokeWidth={4} size={36} />
@@ -61,7 +67,7 @@ export default function Home() {
             <Button
               variant={"link"}
               onClick={() => SetSelected("writings")}
-              className="font-semibold text-2xl"
+              className="font-semibold text-base px-2 sm:text-2xl sm:px-4"
             >
               {selected === "writings" && (
                 <ChevronRight strokeWidth={4} size={36} />
@@ -73,7 +79,7 @@ export default function Home() {
             <Button
               variant={"link"}
               onClick={() => SetSelected("social")}
-              className="font-semibold text-2xl"
+              className="font-semibold text-base px-2 sm:text-2xl sm:px-4"
             >
               {selected === "social" && (
                 <ChevronRight strokeWidth={4} size={36} />
@@ -81,7 +87,7 @@ export default function Home() {
               Social
             </Button>
           </li>
-        </ul>
+        </motion.ul>
       </div>
     </>
   );
