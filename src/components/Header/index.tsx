@@ -12,7 +12,7 @@ export const Header = () => {
       initial={{ opacity: 0, y: -40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex items-center justify-between w-full py-4 "
+      className="fixed top-4 flex items-center justify-between w-full  max-w-[1420] mx-auto "
     >
       <Link href="/" className="flex items-center gap-2">
         <Image src={vultureIcon} alt="Vulture icon" width={20} />

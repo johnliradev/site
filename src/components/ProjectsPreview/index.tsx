@@ -8,7 +8,7 @@ import { motion } from "motion/react";
 export const ProjectsPreview = () => {
   return (
     <motion.div
-      className="w-full"
+      className="w-full max-w-3xl"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}

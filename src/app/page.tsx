@@ -6,13 +6,12 @@ import { Button } from "@/components/ui/button";
 import { WritingsPreview } from "@/components/WritingsPreview";
 import { ChevronRight } from "lucide-react";
 import { useState } from "react";
-import { motion } from "motion/react";
 
 export default function Home() {
   const [selected, SetSelected] = useState<string>("home");
   return (
     <>
-      <div className="flex justify-between w-full">
+      <div className="flex justify-between w-full relative">
         {/* Viewer */}
         {selected === "home" && <Hero />}
         {selected === "about" && <p>building</p>}
@@ -20,12 +19,7 @@ export default function Home() {
         {selected === "writings" && <WritingsPreview />}
         {selected === "social" && <SocialCard />}
         {/* Selector */}
-        <motion.ul
-          className="flex flex-col gap-3"
-          initial={{ opacity: 0, x: 80 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        <ul className="flex flex-col gap-3 text-end absolute right-20 top-1/2 -translate-y-1/2 z-50">
           <li>
             <Button
               variant={"link"}
@@ -83,10 +77,10 @@ export default function Home() {
               {selected === "social" && (
                 <ChevronRight strokeWidth={4} size={36} />
               )}
-              Social & Contact
+              Social
             </Button>
           </li>
-        </motion.ul>
+        </ul>
       </div>
     </>
   );

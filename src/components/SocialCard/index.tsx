@@ -13,7 +13,7 @@ export const SocialCard = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
           <Button size={"xl"}>
             <p>Download my CV</p>
@@ -23,7 +23,7 @@ export const SocialCard = () => {
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
         >
           <Button size={"xl"}>
             <p>Get code</p>

@@ -1,6 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { Button } from "../ui/button";
-import { writings } from "../writings/data";
+import { writings } from "../../lib/writings/data";
 import Link from "next/link";
 import { motion } from "motion/react";
 
@@ -13,7 +13,7 @@ export const WritingsPreview = () => {
 
   return (
     <motion.div
-      className="w-full"
+      className="w-full max-w-3xl"
       initial={{ opacity: 0, y: 40 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
@@ -35,8 +35,15 @@ export const WritingsPreview = () => {
       </p>
       <div className="flex flex-col gap-2">
         {previewWritings.map((writing, idx) => (
-          <div
+          <motion.div
             key={idx}
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.6,
+              delay: 0.2 + idx * 0.2,
+              ease: "easeOut",
+            }}
             className="flex items-center justify-between rounded-md bg-muted px-4 py-2 hover:bg-muted/70 transition-colors"
           >
             <span className="truncate text-sm font-medium">
@@ -49,7 +56,7 @@ export const WritingsPreview = () => {
                 day: "numeric",
               })}
             </span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </motion.div>

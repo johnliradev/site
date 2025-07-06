@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geist.className}  antialiased min-h-screen transition-all bg-black text-white duration-150`}
+        className={`${geist.className} dark antialiased  transition-all bg-black text-white duration-150`}
       >
-        <div className="dark mx-auto flex flex-col items-center  w-[95%] max-w-[1420px]">
+        <div className="relative mx-auto flex flex-col items-center justify-center min-h-screen   w-[95%] max-w-[1420px]">
           <Header />
           {children}
         </div>
