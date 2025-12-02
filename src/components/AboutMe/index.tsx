@@ -14,12 +14,12 @@ export const AboutMe = () => {
   return (
     <div className="w-full max-w-3xl">
       <div className="flex text-xl items-center justify-between border-b pb-1 border-muted-foreground">
-        <p className="font-semibold text-lg">About Me</p>
+        <p className="font-medium text-lg">About Me</p>
       </div>
 
       <div className="mt-6">
-        <h3 className="text-lg font-semibold mb-3">Who I Am</h3>
-        <p className="text-md font-medium text-muted-foreground leading-relaxed">
+        <h3 className="text-lg font-medium mb-3">Who I Am</h3>
+        <p className="text-md text-muted-foreground leading-relaxed">
           I'm a Computer Science student and full stack developer, currently focused on backend
           development. Passionate about building clean, efficient, and scalable systems. I'm
           constantly learning and refining my skills through hands-on projects and real-world
@@ -29,7 +29,7 @@ export const AboutMe = () => {
 
       <div className="mt-6">
         <div className="bg-muted rounded-lg p-6">
-          <h4 className="text-lg font-semibold mb-4">My technologies</h4>
+          <h4 className="text-lg font-medium mb-4">My technologies</h4>
 
           {/* Technology Category Selector */}
           <div className="flex gap-2 mb-4">
