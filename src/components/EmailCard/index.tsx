@@ -10,7 +10,6 @@ import {
 } from "../ui/card";
 import { Badge } from "../ui/badge";
 import { useEffect, useState } from "react";
-import { motion } from "motion/react";
 
 export const EmailCard = () => {
   const [isCopy, setIsCopy] = useState<boolean>(false);
@@ -31,11 +30,7 @@ export const EmailCard = () => {
   }, [isCopy]);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+    <div>
       <Card className="gap-1 max-h-fit">
         <CardHeader>
           <CardTitle className="flex gap-4">
@@ -56,6 +51,6 @@ export const EmailCard = () => {
           </Button>
         </CardFooter>
       </Card>
-    </motion.div>
+    </div>
   );
 };

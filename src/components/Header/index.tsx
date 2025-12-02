@@ -2,26 +2,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import vultureIcon from "@/assets/vulture.svg";
-import { Button } from "../ui/button";
-import { ArrowDown, ArrowUpRight } from "lucide-react";
-import { motion } from "motion/react";
-import {
-  DropdownMenu,
-  DropdownMenuTrigger,
-  DropdownMenuContent,
-  DropdownMenuItem,
-} from "../ui/dropdown-menu";
-import { Menu } from "lucide-react";
-import { useEffect, useState } from "react";
 
 export const Header = () => {
   return (
-    <motion.header
-      initial={{ opacity: 0, y: -40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="flex items-center justify-between py-4 w-full sm:max-w-5xl sm:mx-auto"
-    >
+    <header className="flex items-center justify-between py-4 w-full sm:max-w-5xl sm:mx-auto">
       <Link href="/" className="flex items-center gap-2">
         <Image src={vultureIcon} alt="Vulture icon" width={20} />
         <h2 className="font-bold text-xl">John lira</h2>
@@ -51,6 +35,6 @@ export const Header = () => {
           </li>
         </ul>
       </div>
-    </motion.header>
+    </header>
   );
 };

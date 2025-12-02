@@ -2,22 +2,16 @@ import { ArrowUpRight } from "lucide-react";
 import { Button } from "../ui/button";
 import { writings } from "../../lib/writings/data";
 import Link from "next/link";
-import { motion } from "motion/react";
 
 export const WritingsPreview = () => {
   // Sort writings by date descending and take the 2 most recent
   const sortedWritings = [...writings].sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
   );
   const previewWritings = sortedWritings.slice(0, 2);
 
   return (
-    <motion.div
-      className="w-full max-w-3xl"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+    <div className="w-full max-w-3xl">
       <div className="flex text-xl  items-center justify-between border-b pb-1 border-muted-foreground">
         <p className="font-semibold text-lg">Writings</p>
         <Link href="/">
@@ -35,15 +29,8 @@ export const WritingsPreview = () => {
       </p>
       <div className="flex flex-col gap-2">
         {previewWritings.map((writing, idx) => (
-          <motion.div
+          <div
             key={idx}
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.3,
-              delay: 0.1 + idx * 0.1,
-              ease: "easeOut",
-            }}
             className="flex items-center justify-between rounded-md bg-muted px-4 py-2 hover:bg-muted/70 transition-colors"
           >
             <span className="truncate text-sm font-medium">
@@ -56,9 +43,9 @@ export const WritingsPreview = () => {
                 day: "numeric",
               })}
             </span>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
