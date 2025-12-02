@@ -3,16 +3,16 @@
 export const Hero = () => {
   return (
     <div className="flex flex-col gap-20">
-      <div>
-        <p className="text-8xl font-medium">Hi, i'm John</p>
-        <p className="text-4xl">
-          No hyper bio here, i'm just a full-stack developer.
+      <div className="flex flex-col gap-4">
+        <p className="text-7xl font-medium">Hi, i'm John</p>
+        <p className="text-2xl">
+          Bachelor's degree in Computer Science, with a focus on <br />
+          developing scalable web applications.
         </p>
       </div>
 
       <p className="text-xl text-muted-foreground">
-        On side, you'll see my projects, writings, contact info and, sure, about
-        me.
+        On side, you can see my projects, writings, contact info and, sure, about me.
       </p>
     </div>
   );

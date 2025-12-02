@@ -1,7 +1,7 @@
 "use client";
 import { AboutMe } from "@/components/AboutMe";
 import { Hero } from "@/components/Hero";
-import { Menu } from "@/components/Menu/menu";
+import { Menu } from "@/components/Menu";
 import { ProjectsPreview } from "@/components/ProjectsPreview";
 import { SocialCard } from "@/components/SocialCard";
 import { WritingsPreview } from "@/components/WritingsPreview";
