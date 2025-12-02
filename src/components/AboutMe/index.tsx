@@ -4,26 +4,11 @@ export const AboutMe = () => {
   const [selectedTech, setSelectedTech] = useState<string>("backend");
 
   const technologies = {
-    backend: [
-      "Node.js",
-      "TypeScript",
-      "ExpressJS",
-      "Fastify",
-      "PostgreSQL",
-      "MongoDB",
-      "Prisma ORM",
-    ],
-    frontend: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "TailwindCSS",
-      "HTML/CSS",
-      "ShadcnUI",
-      "Zod",
-    ],
-    tools: ["Git", "Docker", "VS Code", "Postman", "Figma", "Cursor", "VIM"],
-    others: ["Linux", "REST APIs", "Log", "JWT"],
+    backend: ["Node.js", "BUN", "Elysia", "TypeScript", "Express", "Fastify", "Prisma"],
+    frontend: ["React", "Next.js", "TypeScript", "TailwindCSS", "Shadcn UI", "Zod"],
+    database: ["PostgreSQL", "MongoDB", "MySQL", "Redis"],
+    tools: ["Git", "Docker", "Postman", "Vim", "VS Code", "Figma", "Cursor"],
+    others: ["Cypress", "Playwright", "Linux", "REST APIs", "JWT", "Logging"],
   };
 
   return (
@@ -34,11 +19,11 @@ export const AboutMe = () => {
 
       <div className="mt-6">
         <h3 className="text-lg font-semibold mb-3">Who I Am</h3>
-        <p className="text-md text-muted-foreground leading-relaxed">
-          I'm a Computer Science student and full stack developer, currently
-          focused on backend development. Passionate about building clean,
-          efficient, and scalable systems, I'm constantly learning and refining
-          my skills through hands-on projects and real-world problem solving.
+        <p className="text-md font-medium text-muted-foreground leading-relaxed">
+          I'm a Computer Science student and full stack developer, currently focused on backend
+          development. Passionate about building clean, efficient, and scalable systems. I'm
+          constantly learning and refining my skills through hands-on projects and real-world
+          problem solving.
         </p>
       </div>
 
@@ -52,10 +37,10 @@ export const AboutMe = () => {
               <button
                 key={category}
                 onClick={() => setSelectedTech(category)}
-                className={`px-3 py-1 rounded-md text-sm font-medium transition-colors ${
+                className={`px-3 py-1 rounded-md cursor-pointer text-sm font-medium transition-colors duration-300 ${
                   selectedTech === category
-                    ? "bg-white text-black"
-                    : "text-muted-foreground hover:text-white"
+                    ? "bg-neutral-800 text-white"
+                    : "text-muted-foreground  hover:text-black"
                 }`}
               >
                 {category.charAt(0).toUpperCase() + category.slice(1)}
@@ -65,16 +50,14 @@ export const AboutMe = () => {
 
           {/* Technology List */}
           <div className="grid grid-cols-2 gap-2">
-            {technologies[selectedTech as keyof typeof technologies].map(
-              (tech, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center justify-center px-3 py-2 bg-black/20 rounded-md text-sm font-medium hover:bg-black/30 transition-colors"
-                >
-                  {tech}
-                </div>
-              ),
-            )}
+            {technologies[selectedTech as keyof typeof technologies].map((tech, idx) => (
+              <div
+                key={idx}
+                className="flex items-center justify-center px-3 py-2 bg-black/20 rounded-md text-sm font-medium hover:bg-black/30 transition-colors"
+              >
+                {tech}
+              </div>
+            ))}
           </div>
         </div>
       </div>
