@@ -12,17 +12,12 @@ import {
 import XIcon from "@/assets/x-icon.svg";
 import Image from "next/image";
 import { Users } from "lucide-react";
-import { motion } from "motion/react";
+
 import Link from "next/link";
 
 export const XCard = () => {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className="w-full max-w-sm text-center"
-    >
+    <div className="w-full max-w-sm text-center">
       <Card className="w-full max-w-sm text-center">
         <CardHeader>
           <CardTitle className="flex gap-4 items-start text-start">
@@ -47,6 +42,6 @@ export const XCard = () => {
           </Link>
         </CardFooter>
       </Card>
-    </motion.div>
+    </div>
   );
 };

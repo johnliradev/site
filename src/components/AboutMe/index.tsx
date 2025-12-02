@@ -1,4 +1,3 @@
-import { motion } from "motion/react";
 import { useState } from "react";
 
 export const AboutMe = () => {
@@ -28,12 +27,7 @@ export const AboutMe = () => {
   };
 
   return (
-    <motion.div
-      className="w-full max-w-3xl"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+    <div className="w-full max-w-3xl">
       <div className="flex text-xl items-center justify-between border-b pb-1 border-muted-foreground">
         <p className="font-semibold text-lg">About Me</p>
       </div>
@@ -79,11 +73,11 @@ export const AboutMe = () => {
                 >
                   {tech}
                 </div>
-              )
+              ),
             )}
           </div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 };

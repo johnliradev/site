@@ -3,16 +3,9 @@ import { Button } from "../ui/button";
 import { projects } from "../../lib/Projects/data";
 import Link from "next/link";
 
-import { motion } from "motion/react";
-
 export const ProjectsPreview = () => {
   return (
-    <motion.div
-      className="w-full max-w-3xl"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-    >
+    <div className="w-full max-w-3xl">
       <div className="flex text-xl  items-center justify-between border-b  pb-1 border-muted-foreground">
         <p>Projects</p>
         <Link href={"/"}>
@@ -24,13 +17,7 @@ export const ProjectsPreview = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
         {projects.slice(0, 2).map((project, index) => (
-          <motion.div
-            key={index}
-            className="space-y-4"
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: index * 0.4, ease: "easeOut" }}
-          >
+          <div key={index} className="space-y-4">
             <div className="space-y-2">
               <h3 className="text-lg font-semibold">{project.title}</h3>
               <div className="flex flex-wrap gap-2">
@@ -67,9 +54,9 @@ export const ProjectsPreview = () => {
                 )}
               </div>
             </div>
-          </motion.div>
+          </div>
         ))}
       </div>
-    </motion.div>
+    </div>
   );
 };
