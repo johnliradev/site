@@ -13,7 +13,6 @@ export const Menu = () => {
           { key: "about", label: "About me" },
           { key: "projects", label: "Projects" },
           { key: "writings", label: "Writings" },
-          { key: "contact", label: "Contact" },
         ].map((item) => (
           <li key={item.key}>
             <Button

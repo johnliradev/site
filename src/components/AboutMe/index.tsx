@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Badge } from "../ui/badge";
+import { Button } from "../ui/button";
 
 export const AboutMe = () => {
   const [selectedTech, setSelectedTech] = useState<string>("backend");

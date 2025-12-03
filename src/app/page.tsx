@@ -1,9 +1,9 @@
 "use client";
 import { AboutMe } from "@/components/AboutMe";
+
 import { Hero } from "@/components/Hero";
 import { Menu } from "@/components/Menu";
 import { ProjectsPreview } from "@/components/ProjectsPreview";
-import { SocialCard } from "@/components/SocialCard";
 import { WritingsPreview } from "@/components/WritingsPreview";
 import { useMenu } from "@/hooks/useMenu";
 
@@ -17,7 +17,6 @@ export default function Home() {
         {opt === "about" && <AboutMe />}
         {opt === "projects" && <ProjectsPreview />}
         {opt === "writings" && <WritingsPreview />}
-        {opt === "contact" && <SocialCard />}
         {/* Selector */}
         <Menu />
       </div>

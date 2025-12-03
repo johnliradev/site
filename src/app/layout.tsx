@@ -3,6 +3,7 @@ import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Header } from "../components/Header";
 import { MenuContextProvider } from "@/contexts/menu-context";
+import { Contact } from "@/components/Contact";
 
 const geist = Geist({
   variable: "--font-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         <div className="relative mx-auto flex flex-col gap-20 items-center  min-h-screen  w-[95%] max-w-5xl">
           <Header />
           <MenuContextProvider>{children}</MenuContextProvider>
+          <Contact />
         </div>
       </body>
     </html>

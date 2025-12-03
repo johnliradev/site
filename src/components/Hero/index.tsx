@@ -1,5 +1,7 @@
 "use client";
 
+import { Contact } from "../Contact";
+
 export const Hero = () => {
   return (
     <div className="flex flex-col gap-20">
@@ -12,7 +14,7 @@ export const Hero = () => {
       </div>
 
       <p className="text-xl text-muted-foreground">
-        On side, you can see my projects, writings, contact info and, sure, about me.
+        On side, you can see my projects, writings and, sure, about me.
       </p>
     </div>
   );
