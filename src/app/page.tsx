@@ -17,7 +17,7 @@ export default function Home() {
         {opt === "about" && <AboutMe />}
         {opt === "projects" && <ProjectsPreview />}
         {opt === "writings" && <WritingsPreview />}
-        {opt === "social" && <SocialCard />}
+        {opt === "contact" && <SocialCard />}
         {/* Selector */}
         <Menu />
       </div>
